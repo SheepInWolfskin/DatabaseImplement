@@ -1,0 +1,434 @@
+csc343h-zhouzh39=> \q
+dbsrv1:~/csc343/A3$ psql csc343h-zhouzh39
+psql (9.5.10)
+Type "help" for help.
+
+csc343h-zhouzh39=> \i schema.sql    
+psql:schema.sql:1: NOTICE:  drop cascades to 31 other objects
+DETAIL:  drop cascades to table quizschema.student
+drop cascades to table quizschema.room
+drop cascades to table quizschema.class
+drop cascades to table quizschema.enrollment
+drop cascades to table quizschema.questionbank
+drop cascades to table quizschema.numquesfalse
+drop cascades to table quizschema.mcquesfalse
+drop cascades to table quizschema.mchint
+drop cascades to table quizschema.numquestrue
+drop cascades to table quizschema.mcquestrue
+drop cascades to table quizschema.tfquestrue
+drop cascades to table quizschema.quiz
+drop cascades to table quizschema.quizandques
+drop cascades to table quizschema.quizandclass
+drop cascades to table quizschema.studentresponsemc
+drop cascades to table quizschema.studentresponsenum
+drop cascades to table quizschema.studentresponsetf
+drop cascades to table quizschema.q3
+drop cascades to view quizschema.mc_responce
+drop cascades to view quizschema.tf_responce
+drop cascades to view quizschema.num_responce
+drop cascades to view quizschema.mc_correct
+drop cascades to view quizschema.tf_correct
+drop cascades to view quizschema.num_correct
+drop cascades to view quizschema.mc_score
+drop cascades to view quizschema.tf_score
+drop cascades to view quizschema.num_score
+drop cascades to view quizschema.big_list
+drop cascades to view quizschema.no_score
+drop cascades to view quizschema.final_record
+drop cascades to view quizschema.get_info
+DROP SCHEMA
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+csc343h-zhouzh39=> \i data.sql      
+INSERT 0 6
+INSERT 0 2
+INSERT 0 2
+INSERT 0 6
+INSERT 0 5
+INSERT 0 3
+INSERT 0 8
+INSERT 0 4
+INSERT 0 1
+INSERT 0 3
+INSERT 0 1
+INSERT 0 1
+INSERT 0 4
+INSERT 0 1
+INSERT 0 7
+INSERT 0 3
+INSERT 0 4
+csc343h-zhouzh39=> \i runner.sql    
+-- Loading schema and data:
+psql:schema.sql:1: NOTICE:  drop cascades to 17 other objects
+DETAIL:  drop cascades to table student
+drop cascades to table room
+drop cascades to table class
+drop cascades to table enrollment
+drop cascades to table questionbank
+drop cascades to table numquesfalse
+drop cascades to table mcquesfalse
+drop cascades to table mchint
+drop cascades to table numquestrue
+drop cascades to table mcquestrue
+drop cascades to table tfquestrue
+drop cascades to table quiz
+drop cascades to table quizandques
+drop cascades to table quizandclass
+drop cascades to table studentresponsemc
+drop cascades to table studentresponsenum
+drop cascades to table studentresponsetf
+DROP SCHEMA
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 6
+INSERT 0 2
+INSERT 0 2
+INSERT 0 6
+INSERT 0 5
+INSERT 0 3
+INSERT 0 8
+INSERT 0 4
+INSERT 0 1
+INSERT 0 3
+INSERT 0 1
+INSERT 0 1
+INSERT 0 4
+INSERT 0 1
+INSERT 0 7
+INSERT 0 3
+INSERT 0 4
+-- Query 1:
+CREATE TABLE
+psql:q1.sql:5: NOTICE:  view "stid" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+INSERT 0 6
+-- Query 2:
+CREATE TABLE
+psql:q2.sql:6: NOTICE:  view "tfques" does not exist, skipping
+DROP VIEW
+psql:q2.sql:7: NOTICE:  view "mcquesid" does not exist, skipping
+DROP VIEW
+psql:q2.sql:9: NOTICE:  view "mchintid" does not exist, skipping
+DROP VIEW
+psql:q2.sql:10: NOTICE:  view "mcnohintid" does not exist, skipping
+DROP VIEW
+psql:q2.sql:12: NOTICE:  view "mchintcount" does not exist, skipping
+DROP VIEW
+psql:q2.sql:13: NOTICE:  view "mcnull" does not exist, skipping
+DROP VIEW
+psql:q2.sql:15: NOTICE:  view "mcfinal" does not exist, skipping
+DROP VIEW
+psql:q2.sql:16: NOTICE:  view "mcfinal2" does not exist, skipping
+DROP VIEW
+psql:q2.sql:18: NOTICE:  view "numid" does not exist, skipping
+DROP VIEW
+psql:q2.sql:19: NOTICE:  view "numques1" does not exist, skipping
+DROP VIEW
+psql:q2.sql:20: NOTICE:  view "numques2" does not exist, skipping
+DROP VIEW
+psql:q2.sql:21: NOTICE:  view "numnull" does not exist, skipping
+DROP VIEW
+psql:q2.sql:22: NOTICE:  view "numnull1" does not exist, skipping
+DROP VIEW
+psql:q2.sql:24: NOTICE:  view "numfinal" does not exist, skipping
+DROP VIEW
+psql:q2.sql:25: NOTICE:  view "numfinal2" does not exist, skipping
+DROP VIEW
+psql:q2.sql:26: NOTICE:  view "final" does not exist, skipping
+DROP VIEW
+psql:q2.sql:36: WARNING:  column "numberofhint" has type "unknown"
+DETAIL:  Proceeding with relation creation anyway.
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+psql:q2.sql:63: WARNING:  column "numberofhint" has type "unknown"
+DETAIL:  Proceeding with relation creation anyway.
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+psql:q2.sql:97: WARNING:  column "numberofhint" has type "unknown"
+DETAIL:  Proceeding with relation creation anyway.
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 5
+-- Query 3:
+CREATE TABLE
+psql:q3.sql:9: NOTICE:  view "mc_responce" does not exist, skipping
+DROP VIEW
+psql:q3.sql:10: NOTICE:  view "tf_responce" does not exist, skipping
+DROP VIEW
+psql:q3.sql:11: NOTICE:  view "num_responce" does not exist, skipping
+DROP VIEW
+psql:q3.sql:12: NOTICE:  view "mc_correct" does not exist, skipping
+DROP VIEW
+psql:q3.sql:13: NOTICE:  view "tf_correct" does not exist, skipping
+DROP VIEW
+psql:q3.sql:14: NOTICE:  view "num_correct" does not exist, skipping
+DROP VIEW
+psql:q3.sql:15: NOTICE:  view "mc_score" does not exist, skipping
+DROP VIEW
+psql:q3.sql:16: NOTICE:  view "tf_score" does not exist, skipping
+DROP VIEW
+psql:q3.sql:17: NOTICE:  view "num_score" does not exist, skipping
+DROP VIEW
+psql:q3.sql:18: NOTICE:  view "big_list" does not exist, skipping
+DROP VIEW
+psql:q3.sql:19: NOTICE:  view "no_score" does not exist, skipping
+DROP VIEW
+psql:q3.sql:20: NOTICE:  view "final_record" does not exist, skipping
+DROP VIEW
+psql:q3.sql:21: NOTICE:  view "get_info" does not exist, skipping
+DROP VIEW
+psql:q3.sql:27: ERROR:  relation "q3" already exists
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 5
+-- Query 4:
+CREATE TABLE
+psql:q4.sql:10: NOTICE:  view "classinfo" does not exist, skipping
+DROP VIEW
+psql:q4.sql:11: NOTICE:  view "classteacher" does not exist, skipping
+DROP VIEW
+psql:q4.sql:12: NOTICE:  view "classstudent" does not exist, skipping
+DROP VIEW
+psql:q4.sql:13: NOTICE:  view "studentandq" does not exist, skipping
+DROP VIEW
+psql:q4.sql:14: NOTICE:  view "mcans" does not exist, skipping
+DROP VIEW
+psql:q4.sql:15: NOTICE:  view "numans" does not exist, skipping
+DROP VIEW
+psql:q4.sql:16: NOTICE:  view "tfans" does not exist, skipping
+DROP VIEW
+psql:q4.sql:17: NOTICE:  view "allans" does not exist, skipping
+DROP VIEW
+psql:q4.sql:19: NOTICE:  view "nullans" does not exist, skipping
+DROP VIEW
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 6
+-- Query 5:
+CREATE TABLE
+psql:q5.sql:9: NOTICE:  drop cascades to 5 other objects
+DETAIL:  drop cascades to view classteacher
+drop cascades to view classstudent
+drop cascades to view studentandq
+drop cascades to view nullans
+drop cascades to view final
+DROP VIEW
+psql:q5.sql:10: NOTICE:  view "classteacher" does not exist, skipping
+DROP VIEW
+psql:q5.sql:11: NOTICE:  view "classstudent" does not exist, skipping
+DROP VIEW
+psql:q5.sql:12: NOTICE:  view "studentandq" does not exist, skipping
+DROP VIEW
+psql:q5.sql:13: NOTICE:  view "tfall" does not exist, skipping
+DROP VIEW
+psql:q5.sql:14: NOTICE:  view "tfres" does not exist, skipping
+DROP VIEW
+psql:q5.sql:15: NOTICE:  view "tfrest" does not exist, skipping
+DROP VIEW
+psql:q5.sql:16: NOTICE:  view "tfresf" does not exist, skipping
+DROP VIEW
+psql:q5.sql:17: NOTICE:  view "tfallpart" does not exist, skipping
+DROP VIEW
+psql:q5.sql:18: NOTICE:  view "tfrespart" does not exist, skipping
+DROP VIEW
+psql:q5.sql:19: NOTICE:  view "tfresnil" does not exist, skipping
+DROP VIEW
+psql:q5.sql:20: NOTICE:  view "tft1" does not exist, skipping
+DROP VIEW
+psql:q5.sql:21: NOTICE:  view "tft2" does not exist, skipping
+DROP VIEW
+psql:q5.sql:22: NOTICE:  view "tft3" does not exist, skipping
+DROP VIEW
+psql:q5.sql:23: NOTICE:  view "mcall" does not exist, skipping
+DROP VIEW
+psql:q5.sql:24: NOTICE:  view "mcres" does not exist, skipping
+DROP VIEW
+psql:q5.sql:25: NOTICE:  view "mcrest" does not exist, skipping
+DROP VIEW
+psql:q5.sql:26: NOTICE:  view "mcresf" does not exist, skipping
+DROP VIEW
+psql:q5.sql:27: NOTICE:  view "mcallpart" does not exist, skipping
+DROP VIEW
+psql:q5.sql:29: NOTICE:  view "mcrespart" does not exist, skipping
+DROP VIEW
+psql:q5.sql:30: NOTICE:  view "mcresnil" does not exist, skipping
+DROP VIEW
+psql:q5.sql:31: NOTICE:  view "mct1" does not exist, skipping
+DROP VIEW
+psql:q5.sql:32: NOTICE:  view "mct2" does not exist, skipping
+DROP VIEW
+psql:q5.sql:33: NOTICE:  view "mct3" does not exist, skipping
+DROP VIEW
+psql:q5.sql:34: NOTICE:  view "numall" does not exist, skipping
+DROP VIEW
+psql:q5.sql:35: NOTICE:  view "numres" does not exist, skipping
+DROP VIEW
+psql:q5.sql:36: NOTICE:  view "numrest" does not exist, skipping
+DROP VIEW
+psql:q5.sql:37: NOTICE:  view "numresf" does not exist, skipping
+DROP VIEW
+psql:q5.sql:38: NOTICE:  view "numallpart" does not exist, skipping
+DROP VIEW
+psql:q5.sql:39: NOTICE:  view "numrespart" does not exist, skipping
+DROP VIEW
+psql:q5.sql:40: NOTICE:  view "numresnil" does not exist, skipping
+DROP VIEW
+psql:q5.sql:41: NOTICE:  view "numt1" does not exist, skipping
+DROP VIEW
+psql:q5.sql:42: NOTICE:  view "numt2" does not exist, skipping
+DROP VIEW
+psql:q5.sql:43: NOTICE:  view "numt3" does not exist, skipping
+DROP VIEW
+psql:q5.sql:44: NOTICE:  view "final" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 4
+csc343h-zhouzh39=> select * from q1;
+ studentnumber |   studentname   
+---------------+-----------------
+ 0998801234    | Lena Headey
+ 0010784522    | Peter Dinklage
+ 0997733991    | Emillia Clarke
+ 5555555555    | Kit Harriongton
+ 1111111111    | Sophie Turner
+ 2222222222    | Maisie William
+(6 rows)
+
+csc343h-zhouzh39=> select * from q2;
+ quesid |                                                                      questext                                                                      | numberofhint 
+--------+----------------------------------------------------------------------------------------------------------------------------------------------------+--------------
+    566 | The Prime Minister, Justin Trudeau, is Canada's Head of State.                                                                                     |             
+    782 | What do you promise when you take the oath of citizenship?                                                                                         |            1
+    601 | During the "Quiet Revolution," Quebec experienced rapid change. In what decade did this occur? (Enter the year that began the decade, e.g., 1840.) |            3
+    790 | During the War of 1812 the Americans burned down the Parliament Buildings in York (now Toronto). What did the British and Canadians do in return?  |            0
+    625 | What is the Underground Railroad?                                                                                                                  |            3
+(5 rows)
+
+csc343h-zhouzh39=> select * from q3;
+ studentnumber |  lastname   | totalgrade 
+---------------+-------------+------------
+ 0998801234    | Headey      |          3
+ 0010784522    | Dinklage    |          8
+ 0997733991    | Clarke      |          5
+ 5555555555    | Harriongton |          1
+ 1111111111    | Turner      |          0
+(5 rows)
+
+csc343h-zhouzh39=> select * from q4;
+    sid     | quesid |                                                                      questext                                                                      
+------------+--------+----------------------------------------------------------------------------------------------------------------------------------------------------
+ 5555555555 |    625 | What is the Underground Railroad?
+ 1111111111 |    625 | What is the Underground Railroad?
+ 1111111111 |    601 | During the "Quiet Revolution," Quebec experienced rapid change. In what decade did this occur? (Enter the year that began the decade, e.g., 1840.)
+ 1111111111 |    790 | During the War of 1812 the Americans burned down the Parliament Buildings in York (now Toronto). What did the British and Canadians do in return?
+ 1111111111 |    566 | The Prime Minister, Justin Trudeau, is Canada's Head of State.
+ 5555555555 |    601 | During the "Quiet Revolution," Quebec experienced rapid change. In what decade did this occur? (Enter the year that began the decade, e.g., 1840.)
+(6 rows)
+
+csc343h-zhouzh39=> select * from q5;
+ quesid | numberofright | numberofwrong | numberofnoans 
+--------+---------------+---------------+---------------
+    601 |             2 |             1 |             2
+    566 |             3 |             1 |             1
+    625 |             2 |             1 |             2
+    790 |             2 |             2 |             1
+(4 rows) 
